@@ -2,8 +2,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -18,7 +18,7 @@
 |password|string|null: false|
 
 ### Association
-- has_many :groups, through: groups_users
+- has_many :groups, through: :groups_users
 - has_many :groups_users
 - has_many :messages
 
@@ -26,10 +26,10 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|string||
+|body|text||
 |image|string||
-|group_id|integer|null:false, foregin_key:true|
-|user_id|integer|null:false, foregin_key:true|
+|group|references|null:false, foregin_key:true|
+|user|references|null:false, foregin_key:true|
 
 ### Association
 - belongs_to :group
@@ -39,9 +39,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null:false, foregin_key:true|
+|name|string|null:false, foregin_key:true|
 
 ### Association
 - has_many :groups_users
-- has_many :users
+- has_many :users, through: :groups_users
+- has_many :messages
+
 
