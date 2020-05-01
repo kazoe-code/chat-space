@@ -39,7 +39,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null:false, foregin_key:true|
+|name|string|null:false|
 
 ### Association
 - has_many :groups_users
