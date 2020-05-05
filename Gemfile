@@ -55,6 +55,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # devise
 gem 'devise'
 
+# from check_box
+gem 'pry-rails'
+
 # gem "haml-rails"
 gem "haml-rails", ">= 1.0", '<= 2.0.1'
 gem 'font-awesome-sass'
