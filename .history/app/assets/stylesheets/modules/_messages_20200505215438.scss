@@ -75,12 +75,9 @@
       .group_name_list{
         font-size: 15px;
         margin-bottom: 5px;
-
-        a {
-          color:$c_white;
-          text-decoration: none;
-        }
-
+      }
+      &_& a {
+        color:$c_white
       }
       .info {
         font-size: 11px;

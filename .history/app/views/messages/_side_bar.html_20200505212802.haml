@@ -10,12 +10,10 @@
         %li
           = link_to edit_user_path(current_user) do
             = icon('fas','cog', class: 'ico')
-
   .side_bar_group
-    %dl.group_name_list
-      - current_user.groups.each do |group|
-        %dt.group_name
-          = link_to '#' do
-            = group.name
-          %dd.info
-            メッセージはまだありません。
+    - current_user.groups.each do |group|
+    %p.group_name_list
+      = link_to '#' do
+      .group__name
+       = group.name
+    %p.info 新着メッセージ
