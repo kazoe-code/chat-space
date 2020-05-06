@@ -71,10 +71,15 @@
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding: 20px;
+      overflow: scroll;
       
       .group_name_list{
         font-size: 15px;
         margin-bottom: 5px;
+
+        .group_name + .group_name {
+          margin-top: 25px;
+        }
 
         a {
           color:$c_white;
@@ -178,54 +183,60 @@
     display: flex;
     position: relative;
     padding: 0 40px;
+    width: 100%;
 
-    form{
+    .form{
       width: 100%;
 
-      .input_box{
+      .input_box {
+        
         position: relative;
         width: 100%;
         height: 50px;
         top: 50%;
         transform: translateY(-50%);
-        display: flex;
-      
-        input[type="text"] {
+      }
+
+        .new_message{
           width: 100%;
           height: 50px;
-          padding: 10px 40px 10px 10px;
-          margin-right: 15px;
-          position: relative;
-        }
-
-        &_image input[type="file"]{
-          display: none;
-        }
-    
-        &_image i {
-          position: absolute;
-          right: 25px;
-          top: 50%;
-          transform: translateY(-50%);
-          font-size: 24px;
-        }
-    
-        .input_box_image {
+          display: flex;
+        
+          #message_content {
+            width: 100%;
+            height: 50px;
+            padding: 10px 40px 10px 10px;
+            margin-right: 15px;
             position: relative;
+          }
+
+          input[type="file"]{
+            display: none;
+          }
+      
+          .input_box_image i {
+            position: absolute;
+            right: 25px;
+            line-height: 50px;
+            font-size: 24px;
+          }
+      
+          .input_box_image {
+              position: relative;
+              cursor: pointer;
+          }
+      
+          .btn_send{
+            text-align: center;
+            line-height: 50px;
+            width: 100px;
+            height: 50px;
+            background-color: $c_sky;
             cursor: pointer;
+          }
         }
-    
-        .btn_send{
-          text-align: center;
-          line-height: 50px;
-          width: 100px;
-          height: 50px;
-          background-color: $c_sky;
-          cursor: pointer;
-        }
-      }
-      }
     }
   }
+}
 
 /*--- /main --*/
