@@ -58,6 +58,10 @@ gem 'devise'
 # from check_box
 gem 'pry-rails'
 
+# image
+gem 'carrierwave'
+gem 'mini_magick'
+
 # gem "haml-rails"
 gem "haml-rails", ">= 1.0", '<= 2.0.1'
 gem 'font-awesome-sass'

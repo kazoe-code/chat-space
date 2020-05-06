@@ -15,7 +15,7 @@
     %dl.group_name_list
       - current_user.groups.each do |group|
         %dt.group_name
-          = link_to '#' do
+          = link_to group_messages_path(group) do
             = group.name
           %dd.info
             メッセージはまだありません。

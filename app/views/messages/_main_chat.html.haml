@@ -10,39 +10,15 @@
 
   .comment_box
     .comment_box_inner
-      .comment_box_detail
-        %p.name masa
-        %span.date 2020/05/02(Sat) 10:37:11
-        .comment_text
-          %p.text コメント入ります。コメント入ります。コメント入ります。
-
-    .comment_box_inner
-      .comment_box_detail
-        %p.name kazoe
-        %span.date 2020/05/02(Sat) 10:37:11
-        .comment_text
-          %p.text コメント入ります。コメント入ります。コメント入ります。
-
-    .comment_box_inner
-      .comment_box_detail
-        %p.name tanaka
-        %span.date 2020/05/02(Sat) 10:37:11
-        .comment_text
-          %p.text コメント入ります。コメント入ります。コメント入ります。
-
-    .comment_box_inner
-      .comment_box_detail
-        %p.name koide
-        %span.date 2020/05/02(Sat) 10:37:11
-        .comment_text
-          %p.text コメント入ります。コメント入ります。コメント入ります。
+      = render @messages
 
   .messege_box
     %form
       .input_box
-        %input{type: "text", placeholder: "type a message"}
-        %label{class: "input_box_image"}
-          = icon('far', 'image')
-          %input{type: "file"}
-
-        .btn_send.c_white Send
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+          .form__mask
+            = f.label :image, class: 'input_box_image' do
+              = icon('far', 'image')
+              = f.file_field :image 
+          = f.submit 'Send', class: 'btn_send ,c_white'
