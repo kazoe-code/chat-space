@@ -76,6 +76,10 @@
         font-size: 15px;
         margin-bottom: 5px;
 
+        .group_name + .group_name {
+          margin-top: 25px;
+        }
+
         a {
           color:$c_white;
           text-decoration: none;

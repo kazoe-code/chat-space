@@ -1,12 +1,18 @@
 .main_box
   .main_box_head
     .group_detail
-      %p.main_group_name test
-      %p.member Member：masa
+      = @group.name
+        
+      %p.member
+        Member：
+        %span
+          - @group.users.each do |t|
+            = t.name
     
     .btn_edit
-      = link_to "#", class: "ico" do
-        %span Edit
+      = link_to edit_group_path(params[:group_id]) do
+        %span
+          Edit
 
   .comment_box
     .comment_box_inner

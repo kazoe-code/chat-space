@@ -12,10 +12,10 @@
             = icon('fas','cog', class: 'ico')
 
   .side_bar_group
-    %dl.group_name_list
+    .group_name_list
       - current_user.groups.each do |group|
-        %dt.group_name
+        .group_name
           = link_to group_messages_path(group) do
             = group.name
-          %dd.info
-            = group.show_last_message
+            .info
+              = group.show_last_message
