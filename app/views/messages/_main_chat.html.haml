@@ -13,7 +13,7 @@
       = render @messages
 
   .messege_box
-    %form
+    .form
       .input_box
         = form_for [@group, @message] do |f|
           = f.text_field :content, class: 'form__message', placeholder: 'type a message'
@@ -21,4 +21,4 @@
             = f.label :image, class: 'input_box_image' do
               = icon('far', 'image')
               = f.file_field :image 
-          = f.submit 'Send', class: 'btn_send ,c_white'
+          = f.submit 'Send', class: 'btn_send c_white'

@@ -18,4 +18,4 @@
           = link_to group_messages_path(group) do
             = group.name
           %dd.info
-            メッセージはまだありません。
+            = group.show_last_message
