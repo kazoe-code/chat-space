@@ -71,7 +71,7 @@
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding: 20px;
-      overflow: scroll;
+      overflow-y: scroll;
       
       .group_name_list{
         font-size: 15px;
@@ -150,7 +150,7 @@
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 40px;
-    overflow: scroll;
+    overflow-y: scroll;
 
     &_inner{
       margin-bottom: 46px;
