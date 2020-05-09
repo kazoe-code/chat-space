@@ -152,8 +152,8 @@
     padding: 40px;
     overflow-y: scroll;
 
-    &_inner{
-      margin-bottom: 46px;
+    &_inner + &_inner{
+      margin-top: 46px;
     }
     &_detail{
       .name {
