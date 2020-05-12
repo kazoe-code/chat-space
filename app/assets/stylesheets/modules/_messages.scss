@@ -157,6 +157,12 @@
     height: calc(100vh - 190px);
     padding: 40px;
     overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display:none;
+    }
 
     &_inner + &_inner{
       margin-top: 46px;
