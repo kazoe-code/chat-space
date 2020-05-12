@@ -18,3 +18,5 @@
 
 public/uploads/*
 .history
+
+config/secrets.yml
