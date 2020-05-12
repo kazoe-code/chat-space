@@ -199,6 +199,7 @@
 
     .form{
       width: 100%;
+      padding: 15px 0;
 
       .input_box {
         
@@ -241,7 +242,7 @@
           .btn_send{
             text-align: center;
             line-height: 50px;
-            width: 100px;
+            min-width: 100px;
             height: 50px;
             background-color: $c_sky;
             cursor: pointer;
