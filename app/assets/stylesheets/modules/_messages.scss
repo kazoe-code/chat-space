@@ -72,6 +72,12 @@
       height: calc(100vh - 100px);
       padding: 20px;
       overflow-y: scroll;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display:none;
+      }
       
       .group_name_list{
         font-size: 15px;
